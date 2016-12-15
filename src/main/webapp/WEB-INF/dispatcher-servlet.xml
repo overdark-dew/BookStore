@@ -6,7 +6,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
-    <context:component-scan base-package="com.home.bookstore"/>
+    <context:component-scan base-package="com.andersenlab"/>
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
@@ -15,9 +15,9 @@
     <!--DataBase Information-->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/bookstore"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/bookmanager"/>
         <property name="username" value="root"/>
-        <property name="password" value="root"/>
+        <property name="password" value="rootpass"/>
     </bean>
 
     <!--Hibernate 4 SessionFactory Bean definition-->
@@ -25,7 +25,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
             <list>
-                <value>com.home.bookstore.model.Book</value>
+                <value>com.andersenlab.model.Book</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -37,10 +37,10 @@
     </bean>
 
     <!--BookDao and BookService beans-->
-    <bean id="bookDao" class="com.home.bookstore.dao.BookDaoImpl">
+    <bean id="bookDao" class="com.andersenlab.dao.BookDaoImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
-    <bean id="bookService" class="com.home.bookstore.service.BookServiceImpl">
+    <bean id="bookService" class="com.andersenlab.service.BookServiceImpl">
         <property name="bookDao" ref="bookDao"/>
     </bean>
 

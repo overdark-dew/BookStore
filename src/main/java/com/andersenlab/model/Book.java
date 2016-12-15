@@ -1,10 +1,8 @@
-package com.home.bookstore.model;
+package com.andersenlab.model;
 
 import javax.persistence.*;
 
-/**
- * Created by Alex108 on 10.10.2016.
- */
+
 
 @Entity
 @Table(name = "BOOKS")

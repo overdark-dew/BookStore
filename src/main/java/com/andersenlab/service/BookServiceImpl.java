@@ -1,7 +1,7 @@
-package com.home.bookstore.service;
+package com.andersenlab.service;
 
-import com.home.bookstore.dao.BookDao;
-import com.home.bookstore.model.Book;
+import com.andersenlab.dao.BookDao;
+import com.andersenlab.model.Book;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

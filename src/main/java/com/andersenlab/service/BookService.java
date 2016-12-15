@@ -1,6 +1,6 @@
-package com.home.bookstore.service;
+package com.andersenlab.service;
 
-import com.home.bookstore.model.Book;
+import com.andersenlab.model.Book;
 
 import java.util.List;
 

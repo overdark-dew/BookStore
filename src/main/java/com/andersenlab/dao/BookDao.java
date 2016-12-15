@@ -1,12 +1,10 @@
-package com.home.bookstore.dao;
+package com.andersenlab.dao;
 
-import com.home.bookstore.model.Book;
+import com.andersenlab.model.Book;
 
 import java.util.List;
 
-/**
- * Created by Alex108 on 10.10.2016.
- */
+
 public interface BookDao {
 
     void addBook(Book book);

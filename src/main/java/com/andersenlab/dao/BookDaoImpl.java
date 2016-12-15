@@ -1,18 +1,15 @@
-package com.home.bookstore.dao;
+package com.andersenlab.dao;
 
-import com.home.bookstore.model.Book;
+import com.andersenlab.model.Book;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Alex108 on 10.10.2016.
- */
+
 @Repository
 public class BookDaoImpl implements BookDao {
 
@@ -60,7 +57,7 @@ public class BookDaoImpl implements BookDao {
     @SuppressWarnings("unchecked")
     public List<Book> listBooks() {
         Session session = this.sessionFactory.getCurrentSession();
-        List<Book> list = session.createQuery("from Book").list();
+        List<Book> list = session.createQuery("from books").list();
         for (Book book : list) {
             logger.info("Book list" + book);
         }
