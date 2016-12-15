@@ -4,9 +4,7 @@ import com.andersenlab.model.Book;
 
 import java.util.List;
 
-/**
- * Created by Alex108 on 10.10.2016.
- */
+
 public interface BookService {
 
     void addBook(Book book);

@@ -7,9 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * Created by Alex108 on 10.10.2016.
- */
+
 @Service
 public class BookServiceImpl implements BookService {
 
